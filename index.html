@@ -1,0 +1,1140 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>미식가</title>
+    <meta name="robots" content="데이터히어로 미국주식">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">    
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="js/chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/globalstock.css" />
+    <!-- js -->
+    <script src="js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <!-- 미식가 사이트는 class="globalStock"로 css 구분 -->
+    <div id="wrap">
+        <div id="header">
+            <div class="headerArea">
+                <h1 class="headerLogo">종목명</h1>
+                <div class="searchArea">
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명을 입력하세요." class="searchInput">
+                            <input type="image" src="img/sch_btn.png" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                    <!-- 검색어 자동완성 -->
+                    <div class="AutoComplete">
+                        <!-- //자동완성 결과 노출 class : _show -->
+                        <ul>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //AutoComplete 검색어 자동완성 끝 -->
+                </div>
+                <!-- //searchArea -->
+            </div>
+            <!-- //headerArea -->
+        </div>
+        <!-- //header -->
+
+        <div id="container">
+
+            <!-- 주요 콘텐츠 -->
+            <div class="night">
+                <div class="mainTheme">
+                    <p class="update_time"><strong>전일종가</strong> 20.04/08, USD</p>
+                    <div id="vtab">
+                        <ul>
+                            <li class="tabMenu01 selected">MAGA</li>
+                            <li class="tabMenu02">넷플릭스 vs 디즈니</li>
+                            <li class="tabMenu03">4차산업</li>
+                            <li class="tabMenu04">낯설지가 않아요</li>
+                        </ul>
+                        <!-- MAGA -->
+                        <div class="chartFour">
+                            <!-- chartFour 4개 종목, chartTwo 2개 종목 -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">제너럴일렉트릭</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">GE</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart1" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">제너럴일렉트릭</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">GE</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num decrease">357.13</li>
+                                        <li class="per">
+                                            <span class="decrease">-88.88 <span class="decrease">-88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart2" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Alphabet Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">GOOGL</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart3" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Amazon Com Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">AMZN</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart4" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                        </div>
+                        <!-- //chartFour -->
+                        <!-- 넷플릭스 vs 디즈니 -->
+                        <div>
+                            <div class="chartTwo">
+                                <!-- chartFour 4개 종목, chartTwo 2개 종목 -->
+                                <div class="schChartTitle">
+                                    <div class="chartData">
+                                        <h2 class="title"><a href="">Netflix Inc</a></h2>
+                                        <ul class="info">
+                                            <li class="sum"><span class="eng">NFLX</span> </li>
+                                        </ul>
+                                        <!-- //info -->
+                                        <ul class="detail">
+                                            <li class="num increase">357.13</li>
+                                            <li class="per">
+                                                <span class="increase">+3.51 +1.92%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <div class="chartSheet">
+                                        <!-- 차트영역입니다 -->
+                                        <div id="mainTheme2_chart1" class="mainTheme2_chart1"></div>
+                                    </div>
+                                    <!-- //chartSheet -->
+                                </div>
+                                <!-- //schChartTitle -->
+                                <div class="schChartTitle">
+                                    <div class="chartData">
+                                        <h2 class="title">Walt Disney Co</h2>
+                                        <ul class="info">
+                                            <li class="sum"><span class="eng">DIS</span> </li>
+                                        </ul>
+                                        <!-- //info -->
+                                        <ul class="detail">
+                                            <li class="num decrease">190.02</li>
+                                            <li class="per">
+                                                <span class="decrease">-2.26 -1.20%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </li>
+                                        </ul>
+                                        <!-- //detail -->
+                                    </div>
+                                    <!-- //chartData -->
+                                    <div class="chartSheet">
+                                        <!-- 차트영역입니다 -->
+                                        <div id="mainTheme2_chart2" class="mainTheme2_chart1"></div>
+                                    </div>
+                                    <!-- //chartSheet -->
+                                </div>
+                                <!-- //schChartTitle -->
+                            </div>
+                            <!-- //chartTwo -->
+                        </div>
+                        <!-- 4차산업 -->
+                        <div class="chartFour">
+                            <!-- chartFour 4개 종목, chartTwo 2개 종목 -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Uber Technologies Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">UBER</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart5" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Tesla Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">TSLA</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num decrease">357.13</li>
+                                        <li class="per">
+                                            <span class="decrease">-88.88 <span class="decrease">-88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart6" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Nvidia Corp</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">NVDA</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart7" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Advanced Micro Devices Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">AMD</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart8" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                        </div>
+                        <!-- 낯설지가 않아요 -->
+                        <!-- //chartFour -->
+                        <div class="chartFour">
+                            <!-- chartFour 4개 종목, chartTwo 2개 종목 -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Starbucks Corp</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">SBUX</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart9" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Coca Cola Co</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">KO</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num decrease">357.13</li>
+                                        <li class="per">
+                                            <span class="decrease">-88.88 <span class="decrease">-88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart10" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">Mcdonalds Corp</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">MCD</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart11" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                            <div class="schChartTitle">
+                                <div class="chartData">
+                                    <h2 class="title"><a href="">NIKE Inc</a>
+                                    </h2>
+                                    <ul class="info">
+                                        <li class="sum"><span class="eng">NKE</span> </li>
+                                    </ul>
+                                    <!-- //info -->
+                                    <ul class="detail">
+                                        <li class="num increase">357.13</li>
+                                        <li class="per">
+                                            <span class="increase">+88.88 <span class="increase">+88.88%</span></span>
+                                            <!-- increase 증가, decrease 감소 -->
+                                        </li>
+                                    </ul>
+                                    <!-- //detail -->
+                                </div>
+                                <!-- //chartData -->
+                                <div class="chartSheet">
+                                    <!-- 차트영역입니다 -->
+                                    <div id="mainTheme_chart12" class="mainTheme_chart1"></div>
+                                </div>
+                                <!-- //chartSheet -->
+                            </div>
+                            <!-- //schChartTitle -->
+                        </div>
+                        <!-- //chartFour -->
+                    </div>
+                    <!-- //vtab -->
+
+                </div>
+                <!-- //mainTheme -->
+            </div>
+            <!-- //night -->
+
+            <div class="indicators">
+                <!-- tradingview 위젯 적용 : https://kr.tradingview.com/widget/ticker-tape/ -->
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "description": "마이크로소프트",
+                                        "proName": "NASDAQ:MSFT"
+                                    },
+                                    {
+                                        "description": "애플",
+                                        "proName": "NASDAQ:AAPL"
+                                    },
+                                    {
+                                        "description": "테슬라",
+                                        "proName": "NASDAQ:TSLA"
+                                    },
+                                    {
+                                        "description": "아마존",
+                                        "proName": "NASDAQ:AMZN"
+                                    },
+                                    {
+                                        "description": "코카콜라",
+                                        "proName": "NYSE:KO"
+                                    },
+                                    {
+                                        "description": "알파벳(구글)",
+                                        "proName": "NASDAQ:GOOGL"
+                                    },
+                                    {
+                                        "description": "인텔",
+                                        "proName": "NASDAQ:INTC"
+                                    },
+                                    {
+                                        "description": "AMD",
+                                        "proName": "NASDAQ:AMD"
+                                    }
+                                ]
+                                "colorTheme": "light",
+                                    "isTransparent": false,
+                                        "displayMode": "adaptive",
+                                            "locale": "kr"
+                            }
+                        </script>
+                </div>
+                <!-- TradingView Widget END -->
+                <p class="update_time"><strong>지연시세</strong> 20.04/08, USD</p>
+            </div>
+            <!-- //indicators -->
+
+            <div class="mainDivision">
+                <!-- mainLeft -->
+                <div class="mainLeft">
+                    <h1 class="title">대표종목 <span class="day">20.03/19, USD</span></h1>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">제너럴일렉트릭</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">FLT</span> </li>
+                                                <li class="category">NYSE</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">222.470</li>
+                                                <li class="per">
+                                                    <span class="decrease">-15.20 <span>(-6.40%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">지불 처리 서비스를 제공하는 전자 상거래 전문 기업입니다. 연료, 통행료, 숙박료 등을 기업 고유의 방식으로 설계된 결제 네트워크 및
+                            시스템을 통해 제공합니다.</p>
+                        <p class="total">시가총액 <strong>19,005 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>21.20</td>
+                                    <td>5.10</td>
+                                    <td>23.90<span class="unit">%</span></td>
+                                    <td>0.00<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">제너럴일렉트릭</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">AMZN</span> </li>
+                                                <li class="category">NASDAQ</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">82.38</li>
+                                                <li class="per">
+                                                    <span class="increase">+3.93 <span>(+5.01%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">아이폰, 아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다. iOS, macOS 등 운영체제와 클라우드 서비스 등
+                            소프트웨어 서비스도 제공한다. 아이폰,아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다.</p>
+                        <p class="total">시가총액 <strong>131,339 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>15.45</td>
+                                    <td>N/A</td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">Netflix, Inc.</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">AMZN</span> </li>
+                                                <li class="category">NASDAQ</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">82.38</li>
+                                                <li class="per">
+                                                    <span class="increase">+3.93 <span>(+5.01%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">아이폰, 아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다. iOS, macOS 등 운영체제와 클라우드 서비스 등
+                            소프트웨어 서비스도 제공한다. 아이폰,아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다.</p>
+                        <p class="total">시가총액 <strong>131,339 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>15.45</td>
+                                    <td>N/A</td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">Twitter, Inc.</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">AMZN</span> </li>
+                                                <li class="category">NASDAQ</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">82.38</li>
+                                                <li class="per">
+                                                    <span class="increase">+3.93 <span>(+5.01%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">아이폰, 아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다. iOS, macOS 등 운영체제와 클라우드 서비스 등
+                            소프트웨어 서비스도 제공한다. 아이폰,아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다.</p>
+                        <p class="total">시가총액 <strong>131,339 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>15.45</td>
+                                    <td>N/A</td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">Amazon.com, Inc.</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">AMZN</span> </li>
+                                                <li class="category">NASDAQ</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">82.38</li>
+                                                <li class="per">
+                                                    <span class="increase">+3.93 <span>(+5.01%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">아이폰, 아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다. iOS, macOS 등 운영체제와 클라우드 서비스 등
+                            소프트웨어 서비스도 제공한다. 아이폰,아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다.</p>
+                        <p class="total">시가총액 <strong>131,339 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>15.45</td>
+                                    <td>N/A</td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chartDate chartcard">
+                        <table cellspacing="0" border="1" class="tableRowtype">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="schChartTitle">
+                                            <h2 class="title"><a href="#">Amazon.com, Inc.</a></h2>
+                                            <ul class="info">
+                                                <li class="sum"><span class="eng">AMZN</span> </li>
+                                                <li class="category">NASDAQ</li>
+                                            </ul>
+                                            <!-- //info -->
+                                            <ul class="detail">
+                                                <li class="num">82.38</li>
+                                                <li class="per">
+                                                    <span class="increase">+3.93 <span>(+5.01%)</span></span>
+                                                    <!-- increase 증가, decrease 감소 -->
+                                                </li>
+                                            </ul>
+                                            <!-- //detail -->
+                                        </div>
+                                        <!-- //schChartTitle -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="sum_txt">아이폰, 아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다. iOS, macOS 등 운영체제와 클라우드 서비스 등
+                            소프트웨어 서비스도 제공한다. 아이폰,아이패드 등 모바일 통신 및 미디어 기기, 개인용 컴퓨터 제조사다.</p>
+                        <p class="total">시가총액 <strong>131,339 백만</strong></p>
+                        <table cellspacing="0" border="1" class="tableRowtype card">
+                            <colgroup>
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>PER</th>
+                                    <th>PBR</th>
+                                    <th>ROE</th>
+                                    <th>배당수익률</th>
+                                </tr>
+                                <tr>
+                                    <td>15.45</td>
+                                    <td>N/A</td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                    <td>1.60<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //mainLeft -->
+
+                <!-- mainRight -->
+                <div class="mainRight">
+                    <h1 class="title">최근 실적발표</h1>
+
+                    <table cellspacing="0" border="1" class="tableColtype performance">
+                        <colgroup>
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th><strong>주가</strong></th>
+                                <th><strong>발표순이익</strong></th>
+                                <th><strong>전년대비</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">2.34<br>%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title"><a href="/search/invest_charm/PNC">PNC 파이낸셜 서비스<span
+                                            class="ticker">PNC</span></a></td>
+                                <td class="num">
+                                    <span>132.64</span>
+                                    <span class="increase">+4.94%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </td>
+                                <td class="profit">
+                                    <span>1,311 <span class="dollar">백만달러</span></span>
+                                </td>
+                                <td class="moti">
+                                    <span class="increase">8888.34%</span>
+                                    <!--<span class="increase">2.34<br>%</span>-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- //mainRight -->
+            </div>
+            <!-- //container -->
+
+            <div id="footer">
+                <div class="notice">
+                    <p class="txt">데이터히어로가 제공하는 정보는 신뢰할 만한 자료로 부터 얻어진 것이나 그 정확성에 대해 보증하지 않습니다. 따라서 본 정보를 이용
+                        한 투자에 대한 책임은 해당 투자자에게 귀속되며 데이터히어로는 그 결과에 대해 법적인 책임을 지지 않습니다. 모든 콘텐츠의 저작권
+                        은 데이터히어로에 있으며 사전 허가없이 이를 무단으로 사용하거나, 데이터베이스화 할 경우 민형사상 책임을 물을 수 있습니다.</p>
+                    <img src="img/f_logo.png" alt="데이터히어로" class="f_logo">
+                    <p class="dataLink">data from <strong>Quandl and Sharadar</strong></p>
+                </div>
+                <!-- //notice -->
+            </div>
+        </div>
+        <!-- //wrap -->
+
+</body>
+
+</html>

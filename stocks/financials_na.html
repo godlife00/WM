@@ -1,0 +1,233 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>미식가</title>
+    <meta name="robots" content="데이터히어로 미국주식">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <!-- <meta property="og:image" content="https://image.ajunews.com/images/site/img/module/vietnam/favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <!-- 미국주식 사이트는 class="globalStock"로 css 구분 -->
+    <div id="wrap">
+        <div id="header">
+            <div class="headerArea">
+                <h1 class="headerLogo">종목명</h1>
+                <div class="searchArea">
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명을 입력하세요." class="searchInput">
+                            <input type="image" src="../img/sch_btn.png" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                    <!-- 검색어 자동완성 -->
+                    <div class="AutoComplete">
+                        <!-- //자동완성 결과 노출 class : _show -->
+                        <ul>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //AutoComplete 검색어 자동완성 끝 -->
+                </div>
+                <!-- //searchArea -->
+            </div>
+            <!-- //headerArea -->
+        </div>
+        <!-- //header -->
+
+        <div id="container">
+            <!-- 주요 콘텐츠 -->
+            <div class="schChartTitle">
+                <div>
+                    <h2 class="title">Apple Inc.</h2>
+                    <ul class="info">
+                        <li class="sum">(<span class="eng">AAPL</span> <span class="span2">애플</span>)</li>
+                        <li class="category">NASDAQ</li>
+                    </ul>
+                    <!-- //info -->
+                </div>
+
+                <ul class="detail">
+                    <li class="num">190.02</span></li>
+                    <li class="per">
+                        <span class="increase">+2.26 <span>(+1.20%)</span></span> <!-- increase 증가, decrease 감소 -->
+                    </li>
+                    <li class="day">19.05/15, USD</li>
+                </ul>
+                <!-- //detail -->
+            </div>
+            <!-- //schChartTitle -->
+
+            <ul class="tabs">
+                <li rel="tab1"><a href="summary.html">요약</a></li>
+                <li rel="tab2"><a href="invest.html">투자지표</a></li>
+                <li rel="tab3" class="active"><a href="financials.html">재무제표</a></li>
+                <li rel="tab4"><a href="competitors.html">경쟁사</a></li>
+                <li rel="tab5"><a href="vchart.html">재무차트</a></li>
+            </ul>
+
+            <div class="tableData">
+
+
+                <ul class="competitors txtCalculation">
+                    <li><a href="#" class="active">손익계산서</a></li>
+                    <li><a href="#">재무상태표</a></li>
+                    <li><a href="#">현금흐름표</a></li>
+                </ul>
+                <!-- //competitors -->
+
+                <div class="standard_reports">
+
+                    <div class="tableTab positionRe">
+                        <!-- tableTab 위치고정 class = positionRe -->
+                        <div class="tabsArea" id="wrap-dimension">
+                            <span class="fix-active">연환산</span>
+                            <span class="">연간</span>
+                            <span class="">분기별</span>
+                        </div>
+                        <!-- //tabsArea -->
+                        <div class="tabsArea" id="wrap-celltype">
+                            <span class="fix-active">데이터</span>
+                            <span class="">구성비율</span>
+                        </div>
+                    </div>
+                    <!-- //tableTab -->
+
+                    <div class="standard top">
+                        <!-- 최상단에 위치한 경우 레이아웃용 class = top -->
+                        <span class="title">기준</span>
+                        <span style="font-size: 12px;">백만달러</span>
+                    </div>
+                    <!-- //standard -->
+                </div>
+
+                <div class="tableScroll">
+                    <!-- 연간 -->
+                    <table cellspacing="0" border="0" class="tableColtype typeScroll  tableBill">                                                            
+                        <thead>
+                            <tr class="fntfmly_num fix_tr">
+                                <!-- //th 상단 고정 class = fix_tr -->
+                                <th scope="col"><span></span></th>
+                                <th scope="col"><span>&nbsp;</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="depth01">
+                                <td>
+                                    <span><strong>매출액</strong></span>
+                                </td>
+                                <td class="na">N/A</td>
+                            </tr>                            
+                            <tr class="depth02">
+                                <td>
+                                    <span><strong>판매비와관리비</strong></span>
+                                </td>
+                                <td class="na">N/A</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //tableScroll -->
+
+            </div>
+            <!-- //tableData -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+            <div class="notice">
+                <p class="txt">데이터히어로가 제공하는 정보는 신뢰할 만한 자료로 부터 얻어진 것이나 그 정확성에 대해 보증하지 않습니다. 따라서 본 정보를 이용
+                    한 투자에 대한 책임은 해당 투자자에게 귀속되며 데이터히어로는 그 결과에 대해 법적인 책임을 지지 않습니다. 모든 콘텐츠의 저작권
+                    은 데이터히어로에 있으며 사전 허가없이 이를 무단으로 사용하거나, 데이터베이스화 할 경우 민형사상 책임을 물을 수 있습니다.</p>
+                <img src="../img/f_logo.png" alt="데이터히어로" class="f_logo">
+                <p class="dataLink">data from <strong>Quandl and Sharadar</strong></p>
+            </div>
+            <!-- //notice -->
+        </div>
+    </div>
+    <!-- //wrap -->
+
+</body>
+
+</html>

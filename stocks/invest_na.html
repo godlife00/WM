@@ -1,0 +1,417 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>미식가</title>
+    <meta name="robots" content="데이터히어로 미국주식">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <!-- <meta property="og:image" content="https://image.ajunews.com/images/site/img/module/vietnam/favicon_400x210.png"> -->
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+
+<body class="globalStock">
+    <!-- 미국주식 사이트는 class="globalStock"로 css 구분 -->
+    <div id="wrap">
+        <div id="header">
+            <div class="headerArea">
+                <h1 class="headerLogo">종목명</h1>
+                <div class="searchArea">
+                    <form action="">
+                        <fieldset>
+                            <input type="text" placeholder="종목명을 입력하세요." class="searchInput">
+                            <input type="image" src="../img/sch_btn.png" alt="검색" class="searchBtn">
+                        </fieldset>
+                    </form>
+                    <!-- 검색어 자동완성 -->
+                    <div class="AutoComplete">
+                        <!-- //자동완성 결과 노출 class : _show -->
+                        <ul>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="_on">
+                                    <span class="schCode">APPL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">AP</span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APLT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="schCode">APHA</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //AutoComplete 검색어 자동완성 끝 -->
+                </div>
+                <!-- //searchArea -->
+            </div>
+            <!-- //headerArea -->
+        </div>
+        <!-- //header -->
+
+        <div id="container">
+            <!-- 주요 콘텐츠 -->
+            <div class="schChartTitle">
+                <div>
+                    <h2 class="title">Apple Inc.</h2>
+                    <ul class="info">
+                        <li class="sum">(<span class="eng">AAPL</span> <span class="span2">애플</span>)</li>
+                        <li class="category">NASDAQ</li>
+                    </ul>
+                    <!-- //info -->
+                </div>
+
+                <ul class="detail">
+                    <li class="num">190.02</span></li>
+                    <li class="per">
+                        <span class="increase">+2.26 <span>(+1.20%)</span></span> <!-- increase 증가, decrease 감소 -->
+                    </li>
+                    <li class="day">19.05/15, USD</li>
+                </ul>
+                <!-- //detail -->
+            </div>
+            <!-- //schChartTitle -->
+
+            <ul class="tabs">
+                <li rel="tab1"><a href="summary.html">요약</a></li>
+                <li rel="tab2" class="active"><a href="invest.html">투자지표</a></li>
+                <li rel="tab3"><a href="financials.html">재무제표</a></li>
+                <li rel="tab4"><a href="competitors.html">경쟁사</a></li>
+                <li rel="tab5"><a href="vchart.html">재무차트</a></li>
+            </ul>
+
+            <div class="tableData">
+                <!-- <ul class="competitors txtCalculation">
+                    <li><img src="../img/txt/txt_investment.png" alt="투자지표"></h3></li>     
+                </ul> -->
+                <!-- //competitors -->
+
+                <div class="tableTab positionRe">
+                    <!-- tableTab 위치고정 class = positionRe -->
+                    <div class="tabsArea">
+                        <span>연환산</span>
+                        <span class="active">연간</span>
+                        <span>분기별</span>
+                        <strong class="info">
+                            <img src="http://menu.itooza.com/globalstock/img/icon/info.png" alt="안내"
+                                onclick="$(this).next().toggle()">
+                            <div class="ly_help small hide">
+                                <!-- 기본 hide로 숨김, 클릭시 class = view 로 변경 -->
+                                <p>연환산 = 최근4분기 합계</p>
+                                <div class="edge_rgt"></div><!-- edge_lft, edge_cen, edge_rgt -->
+                            </div>
+                        </strong>
+                    </div>
+                    <!-- //tabsArea -->
+                </div>
+                <!-- //tableTab -->
+
+                <div class="tableScroll">
+                    <table cellspacing="0" border="0" class="tableColtype typeScroll tableInvest typeScroll_mouseover"
+                        style="display: table;">
+                        <caption><img src="http://menu.itooza.com/globalstock/img/txt/txt_investment.png" alt="투자 지표">
+                        </caption>
+                        <thead>
+                            <tr class="fntfmly_num fix_tr">
+                                <!-- //th 상단 고정 class = fix_tr -->
+                                <th scope="col"><span title=""></span></th>
+                                <th scope="col"><span title="2019.12.31">&nbsp;</span></th>        
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="depth01 trFixed">
+                                <td class="tdfix"><span title="주당지표"><strong>주당지표</strong></span></td>
+                                <td class="tdLength">
+                                    <span title=""><strong></strong></span>
+                                </td>
+                            </tr>
+                            <tr class="depth02 trFixed">
+                                <td class="th_guide"><span><strong>주당순이익(달러) EPS</strong></span></td>
+                                <td class="na">N/A</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <script>
+                        $(document).ready(function () {
+                            var tableColnum = $('.typeScroll_mouseover th').length - 1;
+                            $(".typeScroll_mouseover .depth01 td.tdLength").attr("colspan", tableColnum);
+                            $('.globalStock #container .tableData .tableTab span').click(function () {
+                                var tableColnum = $('.typeScroll_mouseover th').length - 1;
+                                // 테이블 empty td colspan 설정하기.
+                                $(".typeScroll_mouseover .depth01 td.tdLength").attr("colspan", tableColnum);
+                            });
+                        });
+                    </script>
+
+                    <!-- 테이블 안내 툴팁 -->
+                    <div class="th_guide_hide">
+                        <div class="guide_box">
+                            <ul>
+                                <li>
+                                    <!-- 주당지표 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>보통주순이익 / 가중평균희석주식수</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>자본총계 / 가중평균주식수</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>주당배당금(달러)</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>매출액 / 가중평균주식수</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>영업활동 현금흐름 / 가중평균주식수</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>잉여현금흐름 / 가중평균주식수</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>
+                                    <!-- 가치평가 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>기말 시가총액 / 최근 4분기 합산 보통주순이익</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>기말 시가총액 / 최근 분기 자본총계</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>기말 시가총액 / 최근 4분기 합산 매출액</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>기말 시가총액 / 최근 4분기 합산 영업활동 현금흐름</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(기말 시가총액+차입금-현금및현금성자산) / (감가상각비+법인세비용+이자비용+순이익)</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>주당배당금 / 기말 주가</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>
+                                    <!--수익성-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(매출총이익/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(영업이익/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(지배지분 순이익/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(EBITDA/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(잉여현금흐름/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(최근 4분기 합산 보통주순이익/최근 4분기 평균자본)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(최근 4분기 합산 보통주순이익/최근 4분기 평균자산)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(EBIT/최근 4분기 평균투하자본)*100, 투하자본 = 차입금+자산총계-무형자산-현금및현금성자산-유동부채</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>
+                                    <!--안정성-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(부채총계/자본총계)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(유동자산/유동부채)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>영업이익 / 이자비용</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(차입금/자산총계)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(이자비용/매출액)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>
+                                    <!--효율성-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>(매출액/최근 4분기 평균자산)*100</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>365 / (매출액 / 매출채권및기타채권)</li>
+                            </ul>
+                        </div>
+                        <div class="guide_box">
+                            <ul>
+                                <li>365 / (매출원가 / 재고자산)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //th_guide_hide -->
+
+                </div>
+                <!-- //tableScroll -->
+            </div>
+            <!-- //tableData -->
+
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+            <div class="notice">
+                <p class="txt">데이터히어로가 제공하는 정보는 신뢰할 만한 자료로 부터 얻어진 것이나 그 정확성에 대해 보증하지 않습니다. 따라서 본 정보를 이용
+                    한 투자에 대한 책임은 해당 투자자에게 귀속되며 데이터히어로는 그 결과에 대해 법적인 책임을 지지 않습니다. 모든 콘텐츠의 저작권
+                    은 데이터히어로에 있으며 사전 허가없이 이를 무단으로 사용하거나, 데이터베이스화 할 경우 민형사상 책임을 물을 수 있습니다.</p>
+                <img src="../img/f_logo.png" alt="데이터히어로" class="f_logo">
+                <p class="dataLink">data from <strong>Quandl and Sharadar</strong></p>
+            </div>
+            <!-- //notice -->
+        </div>
+    </div>
+    <!-- //wrap -->
+
+</body>
+
+</html>
