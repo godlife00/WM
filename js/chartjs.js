@@ -66,6 +66,10 @@ $(document).ready(function () {
                 }
             },
 
+            exporting: {
+                enabled: false
+            },
+
             credits: {
                 enabled: false,
             },
@@ -74,13 +78,13 @@ $(document).ready(function () {
                 enabled: false,
             },
 
-            exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
-            },
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
 
             series: [{
                 name: '',
@@ -168,6 +172,10 @@ $(document).ready(function () {
                 }
             },
 
+            exporting: {
+                enabled: false
+            },
+
             credits: {
                 enabled: false,
             },
@@ -176,13 +184,13 @@ $(document).ready(function () {
                 enabled: false,
             },
 
-            exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
-            },
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
 
             series: [{
                 name: '',
@@ -270,6 +278,10 @@ $(document).ready(function () {
                 }
             },
 
+            exporting: {
+                enabled: false
+            },
+
             credits: {
                 enabled: false,
             },
@@ -278,13 +290,13 @@ $(document).ready(function () {
                 enabled: false,
             },
 
-            exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
-            },
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
 
             series: [{
                 name: '',
@@ -372,6 +384,10 @@ $(document).ready(function () {
                 }
             },
 
+            exporting: {
+                enabled: false
+            },
+
             credits: {
                 enabled: false,
             },
@@ -380,13 +396,13 @@ $(document).ready(function () {
                 enabled: false,
             },
 
-            exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
-            },
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
 
             series: [{
                 name: '',
@@ -482,12 +498,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -583,12 +603,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -684,12 +708,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -786,12 +814,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -888,12 +920,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -989,12 +1025,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -1091,12 +1131,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -1193,12 +1237,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -1295,12 +1343,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{
@@ -1397,12 +1449,16 @@ $(document).ready(function () {
                 enabled: false,
             },
 
+            // exporting: {
+            //     buttons: {
+            //         contextButton: {
+            //             menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+            //         }
+            //     }
+            // },
+
             exporting: {
-                buttons: {
-                    contextButton: {
-                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
-                    }
-                }
+                enabled: false
             },
 
             series: [{

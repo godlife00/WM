@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 
 * {
     margin: 0;
@@ -13,7 +14,8 @@ body {
 }
 
 body {
-    font-family: 'Nanum Gothic', '나눔고딕', '맑은고딕', 'Helvetica', sans-serif;
+    /* font-family: 'Nanum Gothic', '나눔고딕', '맑은고딕', 'Helvetica', sans-serif; */
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     color: #333
 }
@@ -228,19 +230,6 @@ a:visited:hover {
     color: #4339ce;
     text-decoration: underline;
 }
-
-/* .paginate a.cb_pre,
-.paginate a.cb_pre_end,
-.paginate a.cb_next,
-.paginate a.cb_next_end{font-size: 0; background: url('../img/cb_paginate_arrow.png') no-repeat 0 -41px;}
-.paginate a.cb_pre{background-position: -38px -41px; margin-right: 20px;}
-.paginate a.cb_pre_end{background-position: 0 -41px;}
-.paginate a.cb_next{background-position: -77px -41px; margin-left: 20px;}
-.paginate a.cb_next_end{background-position: -120px -41px;}
-.paginate a.cb_pre:hover{background-position: -38px 7px;}
-.paginate a.cb_pre_end:hover{background-position: 0 7px;}
-.paginate a.cb_next:hover{background-position: -77px 7px;}
-.paginate a.cb_next_end:hover{background-position: -120px 7px;} */
 
 /* swiper */
 .swiper-container {
@@ -1028,11 +1017,10 @@ body.globalStock {
     width: 100%;
     box-sizing: border-box;
     background: #fff;
-    width: 1100px;
+    width: 752px;
     margin: 0 auto;
     overflow: hidden;
-    padding-bottom: 30px;
-    background-color: blanchedalmond;
+    padding-bottom: 30px;    
 }
 
 .globalStock #header {
@@ -1043,7 +1031,7 @@ body.globalStock {
 
 .globalStock #container {
     margin: 0 auto;
-    width: 790px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -1066,7 +1054,7 @@ body.globalStock {
 /* header */
 .globalStock #header .headerArea {
     margin: 0 auto;
-    width: 790px;
+    /* width: 790px; */
     box-sizing: border-box;
 }
 
@@ -1343,7 +1331,14 @@ body.globalStock {
     margin-left: 5px;
 }
 
-.globalStock #container .schChartTitle {}
+.globalStock #container .schChartTitle {
+
+}
+
+.globalStock #container .schChartTitle > div {    
+    display: flex;
+    align-items: flex-end;
+}
 
 .globalStock #container .schChartTitle .title {
     vertical-align: top;
@@ -1353,7 +1348,7 @@ body.globalStock {
     display: inline-block;
 }
 
-.globalStock #container .schChartTitle .title.bd {}
+.globalStock #container .schChartTitle .title.bd {}s
 
 .globalStock #container .schChartTitle .info {
     vertical-align: top;
@@ -1363,7 +1358,7 @@ body.globalStock {
 
 .globalStock #container .schChartTitle .info li {
     display: inline-block;
-    line-height: 42px;
+    /* line-height: 42px; */
     vertical-align: top;
 }
 
@@ -1387,7 +1382,7 @@ body.globalStock {
 
 .globalStock #container .schChartTitle .info li.category {
     margin-left: 7px;
-    margin-top: 12px;
+    margin-top: 9px;
     border: 1px solid #dedede;
     width: 59px;
     height: 22px;
@@ -1413,7 +1408,7 @@ body.globalStock {
 }
 
 .globalStock #container .schChartTitle .detail {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
@@ -1559,18 +1554,18 @@ body.globalStock {
 .globalStock #container .schChartTitle .detail li.deal .buying {}
 
 .globalStock #container .schChartTitle .detail li.deal .sell {
-    margin-left: 10px;
-    border
+    margin-left: 10px;    
+    border: 1px solid red;
 }
 
 .globalStock #container .schChartTitle .detail li.deal .buying i,
-.globalStock #container .schChartTitle .detail li.deal .sell i {
+.globalStock #container .schChartTitle .detail li.deal .sell i {    
     position: absolute;
     left: 10px;
     top: 7px;
     width: 23px;
     height: 16px;
-    display: inline-block;
+    
 }
 
 .globalStock #container .schChartTitle .detail li.deal .buying i {
@@ -1871,9 +1866,47 @@ body.globalStock {
     margin-top: 15px;
 }
 
+.globalStock #container .schChartArea .chartSection .tabsArea {
+    overflow: hidden;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .chartsum_tabs {
+    padding-left: 12px;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .chartsum_tabs li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #333;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .chartsum_tabs li.active {
+    color: #dc2428;
+    text-decoration: underline;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .tab_container {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-top: 0;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .tab_container .tab_content {
+    display: none;
+}
+
+.globalStock #container .schChartArea .chartSection .tabsArea .tab_container .tab_content ul {
+    width: 100%;
+}
+
 .globalStock #container .schChartArea .chartDate {
     font-size: 14px;
     margin-top: 30px;
+    clear: both;
 }
 
 .globalStock #container .schChartArea .chartDate .indicator {
@@ -2155,7 +2188,8 @@ body.globalStock {
     display: inline-block;
     padding: 0 5px;
     position: relative;
-    font-family: 'Nanum Gothic', '나눔고딕', font-weight: bold;
+    font-family: 'Nanum Gothic', '나눔고딕',;
+    font-weight: bold;
 }
 
 .globalStock #container .tableData .tableTab span .ly_help {
@@ -2186,7 +2220,7 @@ body.globalStock {
 
 .globalStock #container .tableData .tableTab strong.info {
     position: relative;
-    top: 2px;
+    top: 4px;
     vertical-align: top;
     cursor: pointer;
 }
@@ -2244,7 +2278,7 @@ body.globalStock {
 
 .globalStock #container .tableData .tableColtype td.eng,
 .globalStock #container .tableData .tableColtype td span.eng {
-    ;
+    
 }
 
 .globalStock #container .tableData p.info {
@@ -2429,7 +2463,7 @@ body.globalStock {
     font-size: 12px;
     padding-right: 20px;
     margin-right: 3px;
-    background: url(/img/wm/icon/table_nav.png) no-repeat right 3px;
+    background: url('/img/wm/icon/table_nav.png') no-repeat right 3px;
 }
 
 .globalStock #container .table_nav span:last-child {
@@ -2481,7 +2515,7 @@ body.globalStock {
     display: inline-block;
     width: 6px;
     height: 5px;
-    background: url(/img/wm/icon/data_order.gif) no-repeat 0 0;
+    background: url('/img/wm/icon/data_order.gif') no-repeat 0 0;
     position: relative;
     top: -2px;
     right: -9px;
@@ -3140,6 +3174,11 @@ body.globalStock {
     background: url('../img/bg_arrow.png') no-repeat right 7px;
 }
 
+.globalStock #container .schChartArea .chartSection .label_none {
+    font-size: 0;
+}
+
+
 /* 주가차트 */
 .globalStock #container .chartArea {
     clear: both;
@@ -3186,7 +3225,8 @@ body.globalStock {
     font-size: 15px;
     color: #888;
     display: inline-block;
-    font-family: 'Nanum Gothic', '나눔고딕', font-weight: bold;
+    font-family: 'Nanum Gothic', '나눔고딕' ;
+    font-weight: bold;
 }
 
 .globalStock #container .tableData .competitors.txtCalculation li img {
@@ -3400,7 +3440,7 @@ body.globalStock {
 
 .globalStock #container .tableData .tableScroll .typeScroll.tableCash tr.depth01 td {
     background-color: #fff;
-    background: url(/img/wm/table_border.gif) repeat-x left bottom;
+    background: url('/img/wm/table_border.gif') repeat-x left bottom;
 }
 
 .globalStock #container .tableData .tableScroll .typeScroll.tableCash tr.depth01:nth-child(2n) td {
@@ -3408,7 +3448,7 @@ body.globalStock {
 }
 
 .globalStock #container .tableData .tableScroll .typeScroll.tableCash tr.depth01 td:first-child {
-    background: url(/img/wm/table_border.gif) repeat-x left bottom, url('../img/table_borderRW.gif') repeat-y right top;
+    background: url('/img/wm/table_border.gif') repeat-x left bottom, url('../img/table_borderRW.gif') repeat-y right top;
 }
 
 .globalStock #container .tableData .tableScroll .typeScroll.tableCash tr.depth01 td:first-child {
@@ -3641,6 +3681,7 @@ body.globalStock {
 }
 
 .globalStock #container .performance_card .chartDate.chartcard .schChartTitle .info {
+    padding-top: 5px;
     line-height: 28px;
     display: block;
 }
@@ -3714,6 +3755,7 @@ body.globalStock {
 }
 
 .globalStock #container .performance_card .chartDate.chartcard .schChartTitle .detail {
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 
@@ -3827,7 +3869,7 @@ body.globalStock {
 .globalStock #container .trends_list .table_left,
 .globalStock #container .trends_list .table_right {
     display: inline-block;
-    width: calc(100% / 2 - 27px);
+    width: calc(100% / 2 - 15px);
 }
 
 .globalStock #container .trends_list .table_left {
@@ -3957,7 +3999,7 @@ body.globalStock {
     display: inline-block;
     width: 100px;
     height: 19px;
-    background: url(/img/wm/txt/txt_calculation.png) no-repeat 0 0;
+    background: url('/img/wm/txt/txt_calculation.png') no-repeat 0 0;
 }
 
 .globalStock #container .tableData .competitors.txtInvest li:nth-child(2) a {
@@ -4149,7 +4191,7 @@ body.globalStock {
 .globalStock #container .tableData .tableScroll .typeScroll.tableBill tr.depth02 td {
     background-image: none;
     background-color: #f7f7f7 !important;
-    height: 16px;
+    height: 19px;
     padding-top: 10px;
     font-size: 13px;
 }
@@ -4276,21 +4318,21 @@ body.globalStock {
 }
 
 .globalStock #container .mainTheme .chartFour .chartData {
-    width: 120px;
+    width: 110px;
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
 }
 
 .globalStock #container .mainTheme .chartFour .chartSheet {
-    width: calc(100% - 130px);
+    width: calc(100% - 120px);
     /*height: 124px;*/
     display: inline-block;
     vertical-align: top
 }
 
 .globalStock #container .mainTheme .chartFour .chartSheet .mainTheme_chart1 {
-    width: 160px;
+    width: 140px;
     height: 99px;
 }
 
@@ -4464,21 +4506,23 @@ body.globalStock {
 .globalStock #container .mainDivision {
     position: relative;
     margin-top: 55px;
+    display: flex;
+    gap: 15px;
 }
 
 .globalStock #container .mainLeft {
     width: 100%;
     box-sizing: border-box;
-    padding-right: 300px;
+    /* padding-right: 348px; */
 }
 
 .globalStock #container .mainRight {
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    top: 0;
-    width: 300px;
-    box-sizing: border-box;
-    padding-left: 20px;
+    top: 0; */
+    /* width: 348px;
+    box-sizing: border-box; */
+    /* padding-left: 48px; */
 }
 
 .globalStock #container .mainLeft .title,
@@ -4495,24 +4539,34 @@ body.globalStock {
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard {
-    border: 1px solid #DDDDDD;
+    border: 1px solid #DDDDDD;    
     vertical-align: top;
     margin-top: 17px;
-    height: 250px;
+    height: 265px;
     display: inline-block;
     width: calc(100% / 2 - 7px);
     box-sizing: border-box;
     padding: 10px 0 0;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.globalStock #container .mainLeft .chartDate.chartcard .tableRowtype {
+    /* margin-bottom: 6px;     */
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard:nth-child(2n + 1) {
     margin-left: 10px;
-    ;
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle {
     position: relative;
     padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle .title {
@@ -4525,13 +4579,14 @@ body.globalStock {
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle .info {
-    line-height: 28px;
-    padding-right: 35px;
+    /* line-height: 28px; */
+    /* padding-right: 35px; */
+    padding: 3px 0;
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle .info .sum {
-    line-height: 28px;
-    margin-left: 0;
+    /* line-height: 28px; */
+    margin-left: 0;    
     position: relative;
     top: 3px;
 }
@@ -4543,7 +4598,7 @@ body.globalStock {
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle .info li.category {
-    margin-top: 7px;
+    margin-top: 4px;
     height: 18px;
     line-height: 18px;
 }
@@ -4591,15 +4646,15 @@ body.globalStock {
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle .detail {
-    padding-bottom: 6px;
+    /* padding-bottom: 6px; */
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .sum_txt {
     color: #999;
     font-size: 14px;
     border-top: 1px solid #E0E4E9;
-    padding: 10px 14px 0;
-    margin-bottom: 6px;
+    padding: 7px 14px 3px;
+    margin: 10px 0;
     display: inline-block;
     display: -webkit-box;
     overflow: hidden;
@@ -4607,16 +4662,16 @@ body.globalStock {
     line-height: 1.4em;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical;    
     word-wrap: break-word;
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .total {
     color: #8380A0;
     font-size: 14px;
-    padding: 10px 14px;
+    padding: 7px 14px;
     background: #F4F4F5;
-    border-bottom: 1px solid #E0E4E9;
+    border-bottom: 1px solid #E0E4E9;    
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .total strong {
@@ -4640,7 +4695,7 @@ body.globalStock {
 .globalStock #container .mainLeft .chartDate.chartcard .tableRowtype.card th {
     color: #8380A0;
     font-size: 13px;
-    padding-top: 10px;
+    padding-top: 11px;
 }
 
 .globalStock #container .mainLeft .chartDate.chartcard .tableRowtype.card td {
