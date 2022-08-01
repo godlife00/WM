@@ -4318,21 +4318,21 @@ body.globalStock {
 }
 
 .globalStock #container .mainTheme .chartFour .chartData {
-    width: 110px;
+    width: 160px;
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
 }
 
 .globalStock #container .mainTheme .chartFour .chartSheet {
-    width: calc(100% - 120px);
+    width: calc(100% - 170px);
     /*height: 124px;*/
     display: inline-block;
     vertical-align: top
 }
 
 .globalStock #container .mainTheme .chartFour .chartSheet .mainTheme_chart1 {
-    width: 140px;
+    width: 240px;
     height: 99px;
 }
 
@@ -4507,7 +4507,7 @@ body.globalStock {
     position: relative;
     margin-top: 55px;
     display: flex;
-    gap: 15px;
+    gap: 0 48px;
 }
 
 .globalStock #container .mainLeft {
@@ -4517,6 +4517,8 @@ body.globalStock {
 }
 
 .globalStock #container .mainRight {
+    width: 300px;
+    /* flex-basis: 300px; */
     /* position: absolute;
     right: 0;
     top: 0; */
@@ -4563,7 +4565,7 @@ body.globalStock {
 
 .globalStock #container .mainLeft .chartDate.chartcard .schChartTitle {
     position: relative;
-    padding: 0 10px;
+    padding: 7px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -4656,13 +4658,13 @@ body.globalStock {
     color: #999;
     font-size: 14px;
     border-top: 1px solid #E0E4E9;
-    padding: 7px 14px 3px;
+    padding: 10px 14px;
     margin: 8px 0;
     display: inline-block;
     display: -webkit-box;
     overflow: hidden;
-    height: 2.8em;
-    line-height: 1.4em;
+    height: 3.0em;
+    line-height: 1.5em;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;    
@@ -4672,7 +4674,7 @@ body.globalStock {
 .globalStock #container .mainLeft .chartDate.chartcard .total {
     color: #8380A0;
     font-size: 14px;
-    padding: 7px 14px;
+    padding: 10px 14px;
     background: #F4F4F5;
     border-bottom: 1px solid #E0E4E9;    
 }
@@ -4716,6 +4718,7 @@ body.globalStock {
 }
 
 .globalStock #container .mainRight .tableColtype.performance {
+    width: 300px;
     margin-top: 16px;
     border-bottom: 2px solid #AAA;
 }
@@ -4763,7 +4766,7 @@ body.globalStock {
     font-size: 15px;
     box-sizing: border-box;
     display: inline-block;
-    width: 85px;
+    width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -4773,7 +4776,7 @@ body.globalStock {
     display: block;
     line-height: 1.2rem;
     color: #999;
-    max-width: 85px;
+    max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
