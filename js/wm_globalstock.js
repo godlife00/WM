@@ -695,14 +695,15 @@ $(document).ready(function () {
     });
 
     //투자지표 툴팁        
-    $('.globalStock #container .tableData .tableScroll .typeScroll.tableInvest .th_guide').on("click", function () {
+    $('.globalStock #container .tableData .tableScroll .typeScroll.tableInvest .th_guide').on("click", function () {        
         $('.guide_box').hide();
-        var posY = $(this).position().top;
+        var posY = $(this).offset().top;
         var posW = $(this).children().width();
         var thisIndex = $(this).parent().index();
+        console.log(posY, posW);
         $('.th_guide_hide .guide_box:eq(' + thisIndex + ')').fadeIn().css({
-            'top': posY + 32,
-            'left': posW
+            'top': posY - 290,
+            'left': posW + 30
         });
     });
 
@@ -932,4 +933,3 @@ $(function () {
         $(this).css('background-image', 'none');
     });
 });
-
